@@ -12448,7 +12448,13 @@ exports.default = void 0;
 //
 //
 var _default = {
-  props: ['icon', 'iconPosition']
+  props: {
+    icon: {},
+    iconPosition: {
+      type: String,
+      default: 'left'
+    }
+  }
 };
 exports.default = _default;
         var $d5dcc5 = exports.default || module.exports;
@@ -12556,7 +12562,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53831" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54923" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
