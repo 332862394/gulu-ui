@@ -18,6 +18,9 @@ import chai from 'chai'
 import spies from 'chai-spies'
 chai.use(spies)
 const expect=chai.expect
+try {
+    
+
   //单元测试
   {
       const Constructor=Vue.extend(Button)
@@ -97,3 +100,10 @@ const expect=chai.expect
     button.click()
     expect(spy).to.have.been.called()
   }
+} catch (error) {
+    window.errors=[error]
+}finally{
+    window.errors&&window.errors.forEach((error)=>{
+        console.error(error.message)
+    })
+}
